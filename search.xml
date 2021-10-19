@@ -30,8 +30,8 @@
     <url>/Blog/2021/10/13/%E8%BF%87%E6%BB%A4%E5%99%A8Filter/</url>
     <content><![CDATA[<h1 id="Filter过滤器"><a href="#Filter过滤器" class="headerlink" title="Filter过滤器"></a>Filter过滤器</h1><h3 id="Filter过滤器："><a href="#Filter过滤器：" class="headerlink" title="Filter过滤器："></a>Filter过滤器：</h3><p>过滤器实际上就是对web资源进行拦截，做一些处理后再交给下一个过滤器或servlet处理</p>
 <p>通常都是用来拦截request进行处理的，也可以对返回的response进行拦截处理</p>
-<p>​                                            <strong>流程图如下</strong></p>
-<p><img src="C:\Users\源专属\AppData\Roaming\Typora\typora-user-images\image-20211013192524021.png" alt="image-20211013192524021"></p>
+<p>​                                                        <strong>流程图如下</strong></p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/img-filter-01.png" alt="img-filter-01"></p>
 <p><strong>应用场景</strong></p>
 <ul>
 <li>自动登录</li>
@@ -42,10 +42,10 @@
 <h3 id="创建Filter"><a href="#创建Filter" class="headerlink" title="创建Filter"></a>创建Filter</h3><p>在Servlet中我们一般都会对request和response中的字符集编码进行配置，如果Servlet过多字符集编码发生变化时修改起码会很麻烦，这些通用的字符集编码配置等工作我们可以放到Filter中来实现。</p>
 <p>下面我们来创建一个处理字符集编码的Filter。</p>
 <p>用IDEA来实现</p>
-<p><img src="C:\Users\源专属\AppData\Roaming\Typora\typora-user-images\image-20211013192848760.png" alt="image-20211013192848760"></p>
-<p><img src="C:\Users\源专属\AppData\Roaming\Typora\typora-user-images\image-20211013192919455.png" alt="image-20211013192919455"></p>
-<p><img src="C:\Users\源专属\AppData\Roaming\Typora\typora-user-images\image-20211013193157630.png" alt="image-20211013193157630"></p>
-<p><img src="C:\Users\源专属\AppData\Roaming\Typora\typora-user-images\image-20211013193322355.png" alt="image-20211013193322355"></p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211013192848760.png" alt="image-20211013192848760"></p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211013192919455.png" alt="image-20211013192919455"></p>
+<p><img src="C:/Users/%E6%BA%90%E4%B8%93%E5%B1%9E/AppData/Roaming/Typora/typora-user-images/image-20211013193157630.png" alt="image-20211013193157630"></p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211013193322355.png" alt="image-20211013193322355"></p>
 <p>找到Web-app然后点击</p>
 <p>把web导入</p>
 <p><strong>1、在porm文件中导入自己想要的依赖包</strong></p>
@@ -54,7 +54,7 @@
 
 
 <p><strong>项目包结构</strong></p>
-<p><img src="C:\Users\源专属\AppData\Roaming\Typora\typora-user-images\image-20211013193734143.png" alt="image-20211013193734143"></p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211013193734143.png" alt="image-20211013193734143"></p>
 <p><strong>2、编写过滤器</strong></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.wang.filter;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CharacterEndingFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</span><br><span class="line">    <span class="comment">//初始化</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FilterConfig filterConfig)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//chain:链</span></span><br><span class="line">    <span class="comment">/*1、过滤中所有代码，在过滤特定的请求的时候会执行</span></span><br><span class="line"><span class="comment">      2、必须让过滤器继续同行 */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest request, ServletResponse response, FilterChain chain)</span> <span class="keyword">throws</span> IOException, ServletException </span>&#123;</span><br><span class="line">        request.setCharacterEncoding(<span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">        response.setCharacterEncoding(<span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=UTF-8&quot;</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;CharacterEndingFilter执行前...&quot;</span>);</span><br><span class="line">        chain.doFilter(request,response);</span><br><span class="line">        System.out.println(<span class="string">&quot;CharacterEndingFilter执行后...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//销毁</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -65,13 +65,13 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.wang.servlet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShowServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        resp.getWriter().write(<span class="string">&quot;你好，世界！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.doPost(req, resp);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>5、Tomcat配置</strong></p>
-<p><img src="C:\Users\源专属\AppData\Roaming\Typora\typora-user-images\image-20211013194532172.png" alt="image-20211013194532172"></p>
-<p><img src="C:\Users\源专属\AppData\Roaming\Typora\typora-user-images\image-20211013194614441.png" alt="image-20211013194614441"></p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211013194532172.png" alt="image-20211013194532172"></p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211013194614441.png" alt="image-20211013194614441"></p>
 <p><strong>6、启动服务即可</strong></p>
 <p>在浏览器中输入/show ， 发现乱码，因为/show配置时不经过过滤器</p>
-<p><img src="C:\Users\源专属\AppData\Roaming\Typora\typora-user-images\image-20211013194849191.png" alt="image-20211013194849191"></p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211013194849191.png" alt="image-20211013194849191"></p>
 <p>在浏览器中输入<a href="http://localhost:8081/servlet/show%EF%BC%8C%E5%8F%91%E7%8E%B0%E6%AD%A3%E5%B8%B8%E6%98%BE%E7%A4%BA%EF%BC%8C%E8%AF%B4%E6%98%8E%E8%BF%87%E6%BB%A4%E5%99%A8%E5%8F%91%E6%8C%A5%E4%BD%9C%E7%94%A8">http://localhost:8081/servlet/show，发现正常显示，说明过滤器发挥作用</a></p>
-<p><img src="C:\Users\源专属\AppData\Roaming\Typora\typora-user-images\image-20211013194913487.png" alt="image-20211013194913487"></p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211013194913487.png" alt="image-20211013194913487"></p>
 <p><strong>结束啦  时间是2021年10月13日19:50:47</strong></p>
 ]]></content>
   </entry>
