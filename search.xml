@@ -21,14 +21,18 @@
   <entry>
     <title></title>
     <url>/Blog/2021/10/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a><strong>第一篇博客</strong></h1><p>​        哈哈，第一篇博客就此诞生，折腾这么久，终于吧blog皮肤换好了，以此博客来纪念今天。</p>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title:第一篇博客</span><br></pre></td></tr></table></figure>
+
+<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a><strong>第一篇博客</strong></h1><p>​        哈哈，第一篇博客就此诞生，折腾这么久，终于吧blog皮肤换好了，以此博客来纪念今天。</p>
 <p>​       今天2021年10月12日22:01:46。</p>
 ]]></content>
   </entry>
   <entry>
     <title></title>
     <url>/Blog/2021/10/13/%E8%BF%87%E6%BB%A4%E5%99%A8Filter/</url>
-    <content><![CDATA[<h1 id="Filter过滤器"><a href="#Filter过滤器" class="headerlink" title="Filter过滤器"></a>Filter过滤器</h1><h3 id="Filter过滤器："><a href="#Filter过滤器：" class="headerlink" title="Filter过滤器："></a>Filter过滤器：</h3><p>过滤器实际上就是对web资源进行拦截，做一些处理后再交给下一个过滤器或servlet处理</p>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title:Filter过滤器</span><br></pre></td></tr></table></figure>
+
+<h1 id="Filter过滤器"><a href="#Filter过滤器" class="headerlink" title="Filter过滤器"></a>Filter过滤器</h1><h3 id="Filter过滤器："><a href="#Filter过滤器：" class="headerlink" title="Filter过滤器："></a>Filter过滤器：</h3><p>过滤器实际上就是对web资源进行拦截，做一些处理后再交给下一个过滤器或servlet处理</p>
 <p>通常都是用来拦截request进行处理的，也可以对返回的response进行拦截处理</p>
 <p>​                                                        <strong>流程图如下</strong></p>
 <p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/img-filter-01.png" alt="img-filter-01"></p>
@@ -78,7 +82,9 @@
   <entry>
     <title></title>
     <url>/Blog/2021/10/25/Linux%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<h1 id="Linux概述"><a href="#Linux概述" class="headerlink" title="Linux概述"></a>Linux概述</h1><p>Linux，全称GNU/Linux，是一种免费使用和自由传播的<a href="https://baike.baidu.com/item/%E7%B1%BBUNIX/9032872">类UNIX</a>操作系统，其内核由<a href="https://baike.baidu.com/item/%E6%9E%97%E7%BA%B3%E6%96%AF%C2%B7%E6%9C%AC%E7%BA%B3%E7%AC%AC%E5%85%8B%E7%89%B9%C2%B7%E6%89%98%E7%93%A6%E5%85%B9/1034429">林纳斯·本纳第克特·托瓦兹</a>于1991年10月5日首次发布，它主要受到<a href="https://baike.baidu.com/item/Minix/7106045">Minix</a>和Unix思想的启发，是一个基于<a href="https://baike.baidu.com/item/POSIX">POSIX</a>的多用户、<a href="https://baike.baidu.com/item/%E5%A4%9A%E4%BB%BB%E5%8A%A1/1011764">多任务</a>、支持<a href="https://baike.baidu.com/item/%E5%A4%9A%E7%BA%BF%E7%A8%8B/1190404">多线程</a>和多<a href="https://baike.baidu.com/item/CPU">CPU</a>的操作系统。它能运行主要的<a href="https://baike.baidu.com/item/Unix/219943">Unix</a>工具软件、应用程序和网络协议。它支持<a href="https://baike.baidu.com/item/32%E4%BD%8D/5812218">32位</a>和<a href="https://baike.baidu.com/item/64%E4%BD%8D">64位</a>硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。Linux有上百种不同的发行版，如基于社区开发的<a href="https://baike.baidu.com/item/debian/748667">debian</a>、<a href="https://baike.baidu.com/item/archlinux/10857530">archlinux</a>，和基于商业开发的[Red Hat Enterprise Linux](<a href="https://baike.baidu.com/item/Red">https://baike.baidu.com/item/Red</a> Hat Enterprise Linux/10770503)、<a href="https://baike.baidu.com/item/SUSE/60409">SUSE</a>、[Oracle Linux](<a href="https://baike.baidu.com/item/Oracle">https://baike.baidu.com/item/Oracle</a> Linux/6876458)等。</p>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title:Linux概述</span><br></pre></td></tr></table></figure>
+
+<h1 id="Linux概述"><a href="#Linux概述" class="headerlink" title="Linux概述"></a>Linux概述</h1><p>Linux，全称GNU/Linux，是一种免费使用和自由传播的<a href="https://baike.baidu.com/item/%E7%B1%BBUNIX/9032872">类UNIX</a>操作系统，其内核由<a href="https://baike.baidu.com/item/%E6%9E%97%E7%BA%B3%E6%96%AF%C2%B7%E6%9C%AC%E7%BA%B3%E7%AC%AC%E5%85%8B%E7%89%B9%C2%B7%E6%89%98%E7%93%A6%E5%85%B9/1034429">林纳斯·本纳第克特·托瓦兹</a>于1991年10月5日首次发布，它主要受到<a href="https://baike.baidu.com/item/Minix/7106045">Minix</a>和Unix思想的启发，是一个基于<a href="https://baike.baidu.com/item/POSIX">POSIX</a>的多用户、<a href="https://baike.baidu.com/item/%E5%A4%9A%E4%BB%BB%E5%8A%A1/1011764">多任务</a>、支持<a href="https://baike.baidu.com/item/%E5%A4%9A%E7%BA%BF%E7%A8%8B/1190404">多线程</a>和多<a href="https://baike.baidu.com/item/CPU">CPU</a>的操作系统。它能运行主要的<a href="https://baike.baidu.com/item/Unix/219943">Unix</a>工具软件、应用程序和网络协议。它支持<a href="https://baike.baidu.com/item/32%E4%BD%8D/5812218">32位</a>和<a href="https://baike.baidu.com/item/64%E4%BD%8D">64位</a>硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。Linux有上百种不同的发行版，如基于社区开发的<a href="https://baike.baidu.com/item/debian/748667">debian</a>、<a href="https://baike.baidu.com/item/archlinux/10857530">archlinux</a>，和基于商业开发的[Red Hat Enterprise Linux](<a href="https://baike.baidu.com/item/Red">https://baike.baidu.com/item/Red</a> Hat Enterprise Linux/10770503)、<a href="https://baike.baidu.com/item/SUSE/60409">SUSE</a>、[Oracle Linux](<a href="https://baike.baidu.com/item/Oracle">https://baike.baidu.com/item/Oracle</a> Linux/6876458)等。</p>
 <p><img src="/Blog/Linux%E6%A6%82%E8%BF%B0/linux%E5%AE%A0%E7%89%A9.png" alt="linux宠物"></p>
 <p>Linux吉祥物Tux</p>
 <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>Linux，全称GNU/Linux，是一套免费使用和自由传播的类Unix操作系统，是一个基于POSIX的多用户、多任务、支持多线程和多<a href="https://baike.baidu.com/item/CPU/120556">CPU</a>的操作系统。伴随着<a href="https://baike.baidu.com/item/%E4%BA%92%E8%81%94%E7%BD%91/199186">互联网</a>的发展，Linux得到了来自全世界软件爱好者、组织、公司的支持。它除了在服务器方面保持着强劲的发展势头以外，在个人电脑、<a href="https://baike.baidu.com/item/%E5%B5%8C%E5%85%A5%E5%BC%8F/575465">嵌入式</a>系统上都有着长足的进步。使用者不仅可以直观地获取该操作系统的实现机制，而且可以根据自身的需要来修改完善Linux，使其最大化地适应用户的需要。 [1] </p>
