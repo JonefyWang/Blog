@@ -244,4 +244,42 @@
         <tag>Linux</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Linux_运行级别</title>
+    <url>/Blog/2021/10/27/Linux-%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB/</url>
+    <content><![CDATA[<h2 id="Linux运行级别"><a href="#Linux运行级别" class="headerlink" title="Linux运行级别"></a>Linux运行级别</h2><p>今天学习了Linux运行级别，记录一下有哪些运行级别。</p>
+<h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><h4 id="运行级别说明："><a href="#运行级别说明：" class="headerlink" title="运行级别说明："></a>运行级别说明：</h4><ul>
+<li>0 ：关机</li>
+<li> 1 ：单用户</li>
+<li> 2 ：多用户状态没有网络服务</li>
+<li> 3 ：多用户状态有网络服务</li>
+<li> 4 ：系统未使用保留给用户</li>
+<li> 5 ：图形界面</li>
+<li> 6： 系统重启</li>
+</ul>
+<ul>
+<li><p>应用案例</p>
+<p>命令 ：init[0123456]</p>
+<p>通过init来切换不同的运行级别，比如5-3，然后关机</p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211027145243672.png" alt="image-20211027145243672"></p>
+</li>
+</ul>
+<h4 id="指定运行级别"><a href="#指定运行级别" class="headerlink" title="指定运行级别"></a>指定运行级别</h4><ul>
+<li><p>CentOS7后运行级别说明</p>
+<p>在CentOS7以前，/etc/inittab文件中</p>
+<p>进行了简化，如下：</p>
+<p><em><strong>multi-user.taget</strong></em>：analogous to runlevel 3</p>
+<p><em><strong>graphical.target:</strong></em> analogous to runlevel 5</p>
+</li>
+<li><p>#To view current default target, run:</p>
+<p>systemctl set-defalut</p>
+<p>#To set a deault target,run:</p>
+<p>systemtl set-default TARGET.target</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Linux指令</tag>
+      </tags>
+  </entry>
 </search>
