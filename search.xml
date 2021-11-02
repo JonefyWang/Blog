@@ -320,7 +320,7 @@
 </ul>
 <h4 id="3-3-cd指令"><a href="#3-3-cd指令" class="headerlink" title="3.3 cd指令"></a>3.3 cd指令</h4><p>基本语法： cd[参数]（功能描述：切换到指定目录）</p>
 <p>理解：绝对路径和相对路径</p>
-<p><img src="/Blog/Linux-%E5%AE%9E%E6%93%8D%E7%AF%87-%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/image-20211030091827694.png" alt="image-20211030091827694"></p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211030091827694.png" alt="image-20211030091827694"></p>
 <p>cd~ 或者cd: 回到自己的家目录，比如家目录root， cd~到 root。</p>
 <p>cd.. 回到当前目录的上一级</p>
 <p>案例：</p>
@@ -369,7 +369,7 @@
 </li>
 </ul>
 <h4 id="3-7-cp指令"><a href="#3-7-cp指令" class="headerlink" title="3.7 cp指令"></a>3.7 cp指令</h4><p>cp 指令拷贝文件到指定目录    </p>
-<p><img src="/Blog/Linux-%E5%AE%9E%E6%93%8D%E7%AF%87-%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/image-20211030095436392.png" alt="image-20211030095436392"></p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211030095436392.png" alt="image-20211030095436392"></p>
 <ul>
 <li><p>基本语法 cp [选项] source dest</p>
 </li>
@@ -409,5 +409,46 @@
       <tags>
         <tag>Linux指令</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/Blog/2021/11/02/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B51-%E8%AD%A6%E5%AF%9F%E5%92%8C%E5%9C%9F%E5%8C%AA%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[<p>经过学习了<strong>第十章Linux实操篇-组管理和权限管理</strong>，今天用个例子来总结一下最近学习</p>
+<p>废话不多说，上图：</p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211102151118888.png" alt="image-20211102151118888"></p>
+<ol>
+<li><p>创建组</p>
+<p>groupadd police</p>
+<p>groupadd bandit</p>
+</li>
+<li><p>创建用户</p>
+<p>useradd -g police jack</p>
+<p>useradd -g police jerry</p>
+<p>useradd -g bandit xh</p>
+<p>useradd -g bandit xq</p>
+</li>
+<li><p>jack创建一个文件，自己可以读r写w，本组人员可以读，其他组没人有权限</p>
+<p>首先jack登录，在Linux下先设定jack密码</p>
+<p>passwd jack</p>
+<p>然后输入自己设定的密码即可</p>
+<p>登录jack</p>
+<p>vim jack.txt;</p>
+<p>chmod 640 jack.txt</p>
+</li>
+<li><p>jack 修改该文件，让其他组人可以读，本组人可以读写</p>
+<p>chmod o=r,g=r jack.txt</p>
+</li>
+<li><p>xh投靠警察，看看是否可以读写</p>
+<p>这一步需要调用级别更高的用户，咱们使用root</p>
+<p>登录root用户</p>
+<p>然后进行修改：usermod -g police xh</p>
+</li>
+<li><p>测试xh是否可以读写，xq是否可以呢？小结论，就是如果要对目录内的文件进行操作，需要有对该目录的相应权限。</p>
+</li>
+<li><p>示意图</p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211102152210365.png" alt="image-20211102152210365"></p>
+</li>
+</ol>
+]]></content>
   </entry>
 </search>
