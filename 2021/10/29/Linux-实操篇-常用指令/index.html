@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Linux 实操篇-常用指令 - Jonefy Wang</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="Jonefy Wang Blog,第九章Linux实操篇—常用指令今天学习了linux常用指令，写个blog，加深记忆。
+一、指定运行级别1.1基本介绍运行级别说明：
+
+0：关机
+1：单用户【找回丢失密码】
+2：多用户状态没有网络服,"> 
+    <meta name="author" content="Jonefy Wang"> 
+    <link rel="alternative" href="atom.xml" title="Jonefy Wang" type="application/atom+xml"> 
+    <link rel="icon" href="/Blog/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/Blog/css/diaspora.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Jonefy Wang</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://jonefywang.github.io/Blog"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">Linux 实操篇-常用指令</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Linux 实操篇-常用指令</h1>
+        <div class="stuff">
+            <span>十月 29, 2021</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/Blog/tags/Linux%E6%8C%87%E4%BB%A4/" rel="tag">Linux指令</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="第九章Linux实操篇—常用指令"><a href="#第九章Linux实操篇—常用指令" class="headerlink" title="第九章Linux实操篇—常用指令"></a>第九章Linux实操篇—常用指令</h2><p>今天学习了linux常用指令，写个blog，加深记忆。</p>
+<h3 id="一、指定运行级别"><a href="#一、指定运行级别" class="headerlink" title="一、指定运行级别"></a>一、指定运行级别</h3><h4 id="1-1基本介绍"><a href="#1-1基本介绍" class="headerlink" title="1.1基本介绍"></a>1.1基本介绍</h4><p>运行级别说明：</p>
+<ul>
+<li>0：关机</li>
+<li>1：单用户【找回丢失密码】</li>
+<li>2：多用户状态没有网络服务 </li>
+<li>3：<strong>多用户状态有网络服务</strong></li>
+<li>4：系统未使用保留给用户</li>
+<li>5：图形界面</li>
+<li>6：系统重启</li>
+</ul>
+<p>常用是3和5，也可以默认运行级别</p>
+<h4 id="1-2、应用实例"><a href="#1-2、应用实例" class="headerlink" title="1.2、应用实例"></a>1.2、应用实例</h4><p>命令：init[0123456]</p>
+<h4 id="1-3、CentOS7后运行级别说明"><a href="#1-3、CentOS7后运行级别说明" class="headerlink" title="1.3、CentOS7后运行级别说明"></a>1.3、CentOS7后运行级别说明</h4><p>在CentOS7 以前， /etc/inittab文件中进行了简化，如下</p>
+<p>在CentOS7以前，/etc/inittab文件中</p>
+<p>进行了简化，如下：</p>
+<p><em><strong>multi-user.taget</strong></em>：analogous to runlevel 3</p>
+<p><em><strong>graphical.target:</strong></em> analogous to runlevel 5</p>
+<p>#To view current default target, run:</p>
+<p>systemctl set-defalut</p>
+<p>#To set a deault target,run:</p>
+<p>systemtl set-default TARGET.target</p>
+<h3 id="二、帮助指令"><a href="#二、帮助指令" class="headerlink" title="二、帮助指令"></a>二、帮助指令</h3><h4 id="2-1-man获取帮助信息"><a href="#2-1-man获取帮助信息" class="headerlink" title="2.1 man获取帮助信息"></a>2.1 man获取帮助信息</h4><p>基本语法：man[命令或者配置文件]（功能描述 ：获得shell内置命令的帮助信息）</p>
+<p>实操：查看ls命令下的帮助信息 ：<strong>man ls</strong></p>
+<h4 id="2-2-help指令"><a href="#2-2-help指令" class="headerlink" title="2.2 help指令"></a>2.2 help指令</h4><p>基本语法 ：help 命令（功能描述：获得shell内置命令的帮助信息）</p>
+<p>实操：查看cd命令的帮助信息：<strong>help cd</strong></p>
+<h3 id="三、文件目录类"><a href="#三、文件目录类" class="headerlink" title="三、文件目录类"></a>三、文件目录类</h3><h4 id="3-1-pwd指令"><a href="#3-1-pwd指令" class="headerlink" title="3.1 pwd指令"></a>3.1 pwd指令</h4><p>基本语法：pwd （功能描述：显示当前工作目录的绝对路径）</p>
+<h4 id="3-2-ls指令"><a href="#3-2-ls指令" class="headerlink" title="3.2 ls指令"></a>3.2 ls指令</h4><p>基本语法：ls [选项] [目录或是文件]</p>
+<p>常用选项：</p>
+<ul>
+<li>-a:显示当前目录所有文件和目录，包括隐藏的。</li>
+<li>-l:以列表的方式显示信息</li>
+</ul>
+<h4 id="3-3-cd指令"><a href="#3-3-cd指令" class="headerlink" title="3.3 cd指令"></a>3.3 cd指令</h4><p>基本语法： cd[参数]（功能描述：切换到指定目录）</p>
+<p>理解：绝对路径和相对路径</p>
+<p><img src="/Blog/Linux-%E5%AE%9E%E6%93%8D%E7%AF%87-%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/image-20211030091827694.png" alt="image-20211030091827694"></p>
+<p>cd~ 或者cd: 回到自己的家目录，比如家目录root， cd~到 root。</p>
+<p>cd.. 回到当前目录的上一级</p>
+<p>案例：</p>
+<ol>
+<li>使用绝对路径切换到root目录： cd /root(cd和/之间有一个空格)</li>
+<li>使用绝对路径到/root目录，比如在/home/tom， cd ../../root</li>
+<li>表示回到当前目录的上一级目录， cd ..</li>
+<li>回到家目录， cd ~</li>
+</ol>
+<h4 id="3-4-mkdir-指令"><a href="#3-4-mkdir-指令" class="headerlink" title="3.4 mkdir 指令"></a>3.4 mkdir 指令</h4><ul>
+<li><p>mkdir 指令用于创建目录</p>
+<p>基本语法：mkdir [选项] 要创建的目录</p>
+</li>
+<li><p>常用选项</p>
+<p>-p:创建多级目录</p>
+</li>
+<li><p>应用实例</p>
+<p>案例1：常见一个目录 /home/dog</p>
+<p>mkdir /home/dog</p>
+<p>案例2：创建多级目录 /home/animal/tiger</p>
+<p>mkdir -p /home/animal/tiger</p>
+</li>
+</ul>
+<h4 id="3-5-rmdir-指令删除空目录"><a href="#3-5-rmdir-指令删除空目录" class="headerlink" title="3.5 rmdir 指令删除空目录"></a>3.5 rmdir 指令删除空目录</h4><ul>
+<li><p>基本语法</p>
+<p>​                rmdir [选项] 要删除的空目录</p>
+</li>
+<li><p>应用案例：</p>
+<p>​                删除一个空目录 /home/dog</p>
+<p>​                rmdir  /home/dog</p>
+</li>
+<li><p>使用细节</p>
+<p>rmdir 删除的是空目录，如果目录下有内容时无法删除的</p>
+<p>如果需要删除非空目录，需要使用 rm -rf 要删除的目录</p>
+<p>rm -rf /home/animal</p>
+</li>
+</ul>
+<h4 id="3-6-touch指令"><a href="#3-6-touch指令" class="headerlink" title="3.6 touch指令"></a>3.6 touch指令</h4><ul>
+<li><p>touch 指令创建空文件</p>
+</li>
+<li><p>基本语法:  touch 文件名称</p>
+</li>
+<li><p>案例：在/home目录下创建一个空文件 hello.txt   </p>
+<p>第一步切换目录 cd /home  </p>
+<p>第二步创建文件 touch hello.txt</p>
+</li>
+</ul>
+<h4 id="3-7-cp指令"><a href="#3-7-cp指令" class="headerlink" title="3.7 cp指令"></a>3.7 cp指令</h4><p>cp 指令拷贝文件到指定目录    </p>
+<p><img src="/Blog/Linux-%E5%AE%9E%E6%93%8D%E7%AF%87-%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/image-20211030095436392.png" alt="image-20211030095436392"></p>
+<ul>
+<li><p>基本语法 cp [选项] source dest</p>
+</li>
+<li><p>常用选项</p>
+<p>-r : 递归复制整个文件夹</p>
+</li>
+<li><p>应用案例</p>
+<p>案例一：将 /home/hello.txt 拷贝到 /home/bbb 目录下</p>
+<p>cp  hello.txt/home/bbb</p>
+<p>案例二：递归复制到整个文件夹，将 /home/bbb整个目录，拷贝到 /opt</p>
+<p>cp -r /home/bbb/opt</p>
+</li>
+<li><p>使用细节</p>
+<p>强制覆盖不提醒的方法： \cp             \cp -r /home/bbb/opt</p>
+</li>
+</ul>
+<h4 id="3-8-rm-指令"><a href="#3-8-rm-指令" class="headerlink" title="3.8 rm 指令"></a>3.8 rm 指令</h4><p>说明：rm 指令移除文件或目录</p>
+<ul>
+<li><p>基本语法</p>
+<p>rm  [选项]  要删除的文件或目录</p>
+</li>
+<li><p>常用选项</p>
+<p>-r ：递归删除整个文件夹</p>
+<p>-f ：强制删除不提示</p>
+</li>
+<li><p>案例</p>
+<ol>
+<li>将/home/hello.txt 删除  rm /home/hello.txt</li>
+<li>递归删除整个文件夹/home/bb     rm - rf /home/bbb[删除整个文件夹不提醒]</li>
+</ol>
+</li>
+<li><p>使用细节</p>
+<p>​            强制删除不提示的方法：带上 -f参数即可</p>
+</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/27731339.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='https://link.hhtjim.com/163/1383909126.mp3'></li>
+                        
+                    
+                        
+                            <li title='2' data-url='https://link.hhtjim.com/163/1439363146.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/Blog/js/plugin.js"></script>
+<script src="/Blog/js/typed.js"></script>
+<script src="/Blog/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/Blog/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/Blog/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/Blog/photoswipe/photoswipe.min.js"></script>
+<script src="/Blog/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
