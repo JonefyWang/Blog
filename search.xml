@@ -451,4 +451,45 @@
 </ol>
 ]]></content>
   </entry>
+  <entry>
+    <title>文件权限管理课后练习</title>
+    <url>/Blog/2021/11/02/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/</url>
+    <content><![CDATA[<p>废话不多说上图</p>
+<p><img src="/Blog/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102162721558.png" alt="image-20211102162721558"></p>
+<ol>
+<li><p>建立两个组（神仙（sx），妖怪（yg））</p>
+<img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211102163836316.png" alt="image-20211102163836316" style="zoom: 67%;" /></li>
+<li><p>建立四个用户（唐僧，悟空，八戒，沙僧）</p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211102164014561.png" alt="image-20211102164014561"></p>
+</li>
+<li><p>设置密码</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102164220400.png" alt="image-20211102164220400" style="zoom:80%;" /></li>
+<li><p>把悟空八戒放在妖怪组（yg），把沙僧唐僧放在神仙组（sx）。</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102164640514.png" alt="image-20211102164640514" style="zoom: 80%;" /></li>
+<li><p>用悟空建立一个文件（monkey.java  该文件要输出I am monkey）</p>
+<p>首先用悟空登录</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102165117114.png" alt="image-20211102165117114" style="zoom:50%;" />
+
+<p>然后创建monkey.java文件</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102165343118.png" alt="image-20211102165343118" style="zoom: 67%;" /></li>
+<li><p>给八戒一个可以读r写w的权限</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102165601875.png" alt="image-20211102165601875" style="zoom: 67%;" /></li>
+<li><p>八戒修改monkey.java加入一句话（i am pig）</p>
+<p>首先进入到八戒用户</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102170041599.png" alt="image-20211102170041599" style="zoom: 67%;" />
+
+<p>然后切换到悟空用户查看wk权限<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102170803627.png" alt="image-20211102170803627" style="zoom: 67%;" /></p>
+<p>发现不具有读写执行权限</p>
+<p>然后再给这些权限</p>
+<p><img src="/Blog/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102171042053.png" alt="image-20211102171042053"></p>
+<p>换到八戒用户操作</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102171638454.png" alt="image-20211102171638454" style="zoom:67%;" /></li>
+<li><p>唐僧沙僧对该文件没有权限</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Linux指令</tag>
+      </tags>
+  </entry>
 </search>

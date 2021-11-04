@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>文件权限管理课后练习 - Jonefy Wang</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="Jonefy Wang Blog,废话不多说上图
+
+
+建立两个组（神仙（sx），妖怪（yg））
+
+建立四个用户（唐僧，悟空，八戒，沙僧）
+
+
+设置密码
+
+把悟空八戒放在妖怪组（yg），把沙僧唐僧放在神仙组（sx）。
+
+用悟空建立一个,"> 
+    <meta name="author" content="Jonefy Wang"> 
+    <link rel="alternative" href="atom.xml" title="Jonefy Wang" type="application/atom+xml"> 
+    <link rel="icon" href="/Blog/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/Blog/css/diaspora.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Jonefy Wang</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://jonefywang.github.io/Blog"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">文件权限管理课后练习</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">文件权限管理课后练习</h1>
+        <div class="stuff">
+            <span>十一月 02, 2021</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/Blog/tags/Linux%E6%8C%87%E4%BB%A4/" rel="tag">Linux指令</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p>废话不多说上图</p>
+<p><img src="/Blog/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102162721558.png" alt="image-20211102162721558"></p>
+<ol>
+<li><p>建立两个组（神仙（sx），妖怪（yg））</p>
+<img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211102163836316.png" alt="image-20211102163836316" style="zoom: 67%;" /></li>
+<li><p>建立四个用户（唐僧，悟空，八戒，沙僧）</p>
+<p><img src="https://raw.githubusercontent.com/JonefyWang/img/master/blogimg/image-20211102164014561.png" alt="image-20211102164014561"></p>
+</li>
+<li><p>设置密码</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102164220400.png" alt="image-20211102164220400" style="zoom:80%;" /></li>
+<li><p>把悟空八戒放在妖怪组（yg），把沙僧唐僧放在神仙组（sx）。</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102164640514.png" alt="image-20211102164640514" style="zoom: 80%;" /></li>
+<li><p>用悟空建立一个文件（monkey.java  该文件要输出I am monkey）</p>
+<p>首先用悟空登录</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102165117114.png" alt="image-20211102165117114" style="zoom:50%;" />
+
+<p>然后创建monkey.java文件</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102165343118.png" alt="image-20211102165343118" style="zoom: 67%;" /></li>
+<li><p>给八戒一个可以读r写w的权限</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102165601875.png" alt="image-20211102165601875" style="zoom: 67%;" /></li>
+<li><p>八戒修改monkey.java加入一句话（i am pig）</p>
+<p>首先进入到八戒用户</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102170041599.png" alt="image-20211102170041599" style="zoom: 67%;" />
+
+<p>然后切换到悟空用户查看wk权限<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102170803627.png" alt="image-20211102170803627" style="zoom: 67%;" /></p>
+<p>发现不具有读写执行权限</p>
+<p>然后再给这些权限</p>
+<p><img src="/Blog/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102171042053.png" alt="image-20211102171042053"></p>
+<p>换到八戒用户操作</p>
+<img src="%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/image-20211102171638454.png" alt="image-20211102171638454" style="zoom:67%;" /></li>
+<li><p>唐僧沙僧对该文件没有权限</p>
+</li>
+</ol>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/27731339.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='https://link.hhtjim.com/163/1383909126.mp3'></li>
+                        
+                    
+                        
+                            <li title='2' data-url='https://link.hhtjim.com/163/1439363146.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/Blog/js/plugin.js"></script>
+<script src="/Blog/js/typed.js"></script>
+<script src="/Blog/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/Blog/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/Blog/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/Blog/photoswipe/photoswipe.min.js"></script>
+<script src="/Blog/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
